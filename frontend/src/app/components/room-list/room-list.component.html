@@ -1,0 +1,20 @@
+<h2>Room List</h2>
+
+<table border="1" cellpadding="8">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Room Number</th>
+      <th>Type</th>
+      <th>Available</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let room of rooms">
+      <td>{{ room.id }}</td>
+      <td>{{ room.roomNumber }}</td>
+      <td>{{ room.type }}</td>
+      <td>{{ room.available ? '✅' : '❌' }}</td>
+    </tr>
+  </tbody>
+</table>

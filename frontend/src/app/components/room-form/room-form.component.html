@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>Add New Room</h2>
+  <form (ngSubmit)="onSubmit()">
+    <label>Room Number:</label>
+    <input [(ngModel)]="room.roomNumber" name="roomNumber" required />
+
+    <label>Type:</label>
+    <input [(ngModel)]="room.type" name="type" required />
+
+    <label>Available:</label>
+    <input type="checkbox" [(ngModel)]="room.available" name="available" />
+
+    <button type="submit">Create Room</button>
+  </form>
+</div>

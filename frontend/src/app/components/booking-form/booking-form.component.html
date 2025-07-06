@@ -1,0 +1,21 @@
+<h2>Create Booking</h2>
+<form (ngSubmit)="onSubmit()" #bookingForm="ngForm">
+  <label>Guest Name:</label>
+  <input type="text" [(ngModel)]="booking.guestName" name="guestName" required>
+
+  <label>Check-In Date:</label>
+  <input type="date" [(ngModel)]="booking.checkInDate" name="checkInDate" required>
+
+  <label>Check-Out Date:</label>
+  <input type="date" [(ngModel)]="booking.checkOutDate" name="checkOutDate" required>
+
+  <label>Room:</label>
+  <select [(ngModel)]="booking.roomId" name="roomId" required>
+    <option *ngFor="let room of rooms" [value]="room.id">
+      {{ room.roomNumber }} - {{ room.type }}
+    </option>
+  </select>
+
+  <button type="submit">Create Booking</button>
+</form>
+    

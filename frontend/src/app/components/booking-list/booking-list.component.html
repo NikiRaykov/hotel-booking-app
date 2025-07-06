@@ -1,0 +1,25 @@
+<h2>Bookings</h2>
+<table border="1">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Guest</th>
+      <th>Room</th>
+      <th>Check-in</th>
+      <th>Check-out</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let booking of bookings">
+      <td>{{ booking.id }}</td>
+      <td>{{ booking.guestName }}</td>
+      <td>{{ getRoomNumber(booking.roomId) }}</td>
+      <td>{{ booking.checkInDate }}</td>
+      <td>{{ booking.checkOutDate }}</td>
+      <td>
+        <button (click)="deleteBooking(booking.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
